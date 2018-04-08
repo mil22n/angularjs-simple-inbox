@@ -1,3 +1,11 @@
-<div>
+<div class="inbox">
     <h2>Inbox</h2>
+    <div class="container-fluid">
+        <div class="message row" ng-repeat="message in $ctrl.messages">
+            <div class="initial col-sm-1" ng-bind="message.initial"></div>
+            <div class="from col-sm-3" ng-bind="message.from"></div>
+            <div class="subject col-sm-5" ng-bind="message.subject"></div>
+            <div class="date col-sm-3" ng-bind="(message.date | date: $ctrl.dateFormat)"></div>
+        </div>
+    </div>
 </div>

@@ -1,6 +1,7 @@
 class InboxController {
     constructor(InboxService) {
-        console.log(InboxService.getEmails());
+        this.dateFormat = 'M/d/yyyy, h:mm a';
+        this.messages = InboxService.getMessages();
     }
 }
 

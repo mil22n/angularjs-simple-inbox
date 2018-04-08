@@ -1,5 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import "bootstrap/dist/css/bootstrap.css";
 
 import Components from './components/components';
 import Common from './common/common';

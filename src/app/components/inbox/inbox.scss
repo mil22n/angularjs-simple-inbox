@@ -1,0 +1,12 @@
+.message
+{
+  cursor: pointer;
+
+  .from, .subject {
+    display:inline-block;
+    width:180px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+  }
+}

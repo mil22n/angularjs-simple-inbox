@@ -119,6 +119,9 @@ module.exports = function makeWebpackConfig() {
         }, {
             test: /\.json$/,
             loader: 'json'
+        }, {
+            test: /\.scss$/,
+            loaders: ["style-loader", "css-loader", "sass-loader"]
         },]
     };
 
