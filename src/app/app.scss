@@ -1,0 +1,18 @@
+@import './common/common';
+
+body {
+  background-color: $bgColor;
+}
+
+header {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+app {
+  .content-box {
+    background-color: $itemBackground;
+    border: 1px solid $borderColor;
+    box-shadow: 1px 1px $borderColor;
+  }
+}

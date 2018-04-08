@@ -1,8 +1,10 @@
 <div class="inbox">
-    <h2>Inbox</h2>
-    <div class="container-fluid">
+    <header>
+        <h3>Inbox</h3>
+    </header>
+    <main class="content-box">
         <div class="message" ng-repeat="message in $ctrl.messages" ui-sref="message({id: message.id})">
             <message-info message="message"></message-info>
         </div>
-    </div>
+    </main>
 </div>

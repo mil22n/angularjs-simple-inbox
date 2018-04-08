@@ -2,7 +2,9 @@ import template from './message-info.html';
 import './message-info.scss';
 
 class MessageHeaderController {
-    constructor() {}
+    constructor() {
+        this.dateFormat = 'M/d/yyyy, h:mm a';
+    }
 }
 
 export default {

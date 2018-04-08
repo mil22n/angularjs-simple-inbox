@@ -1,9 +1,12 @@
-<div>
-    <h2>Message detail</h2>
-    <a ui-sref="inbox" href="#">Back</a>
-    <div class="message-details">
+<div class="message">
+    <header>
+        <h3>Message detail</h3>
+        <a ui-sref="inbox" href="#">Back</a>
+    </header>
+    <main class="content-box">
         <message-info message="$ctrl.message"></message-info>
-        <hr>
-        <pre ng-bind="$ctrl.message.text"></pre>
-    </div>
+        <div class="message-content">
+            <pre class="text" ng-bind="$ctrl.message.text"></pre>
+        </div>
+    </main>
 </div>
