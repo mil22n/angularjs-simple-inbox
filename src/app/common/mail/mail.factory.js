@@ -7,7 +7,7 @@ const mailFactory = angular.module('mail', [])
         return {
             get: (id) => {
                 if(id) {
-                    return messages.filter( message => message.id === id);
+                    return messages.filter( message => parseInt(message.id) === parseInt(id));
                 }
                 return messages;
             }

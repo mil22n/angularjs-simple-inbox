@@ -1,0 +1,6 @@
+<div class="message-header row">
+    <div class="initial col-sm-1" ng-bind="$ctrl.message.initial"></div>
+    <div class="from col-sm-3" ng-bind="$ctrl.message.from"></div>
+    <div class="subject col-sm-5" ng-bind="$ctrl.message.subject"></div>
+    <div class="date col-sm-3" ng-bind="($ctrl.message.date | date: $ctrl.dateFormat)"></div>
+</div>

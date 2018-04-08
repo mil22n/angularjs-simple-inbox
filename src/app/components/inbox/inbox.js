@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import InboxService from './inbox.factory';
 
+import InboxService from './inbox.factory';
 import InboxComponent from './inbox.component';
 
 const inboxModule = angular.module('inbox', [ uiRouter, InboxService ])

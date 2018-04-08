@@ -7,11 +7,11 @@ const inboxFactory = angular.module('inbox.services', [  ])
             return {
                 getMessages: () => {
                     return MailService.get().map(email => {
-                        const { from, subject } = email,
+                        const { id, from, subject } = email,
                             initial = email.from[0].toUpperCase(),
                             date = new Date(email.date);
 
-                        return { initial, from, subject, date }
+                        return { id, initial, from, subject, date }
                     }).sort((a, b) => b.date - a.date);
                 }
             }
