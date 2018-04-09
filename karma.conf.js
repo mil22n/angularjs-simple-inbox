@@ -35,11 +35,6 @@ module.exports = function karmaConfig(config) {
             'PhantomJS'
         ],
 
-        browserConsoleLogOptions: {
-            terminal: true,
-            level: ""
-        },
-
         singleRun: true,
 
         // Configure code coverage reporter

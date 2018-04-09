@@ -24,10 +24,29 @@ describe('MailService', () => {
         expect(InboxService.getMessages).toBeDefined();
     });
 
-    it('checks the data returned from the getMessages method is correct', () => {
+    it('checks the data returned from the getMessages method is correct', (done) => {
         InboxService.getMessages().then((data) => {
-            expect(MailService.get).toHaveBeenCalled();
-            expect(testMessages).toEqual(data);
+            expect(data.length).toEqual(testMessages.length);
+
+            data.forEach(item => {
+                let { id, initial, from, subject, date } = item;
+
+                expect(id).toBeDefined();
+                expect(initial).toBeDefined();
+                expect(from).toBeDefined();
+                expect(subject).toBeDefined();
+                expect(date).toBeDefined();
+                expect(angular.isNumber(id)).toBeTruthy();
+                expect(initial.length).toBe(1);
+                expect(initial).toEqual(initial.toUpperCase());
+                expect(Date.parse(date)).not.toBeNaN();
+            });
+
+            done();
         });
+
+        $rootScope.$digest();
+
+        expect(MailService.get).toHaveBeenCalled();
     });
 });
