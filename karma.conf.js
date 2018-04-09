@@ -19,7 +19,8 @@ module.exports = function karmaConfig(config) {
 
         files: [
             // Grab all files in the app folder that contain .spec.
-            'src/tests.webpack.js'
+            'src/tests.webpack.js',
+            'node_modules/babel-polyfill/dist/polyfill.js',
         ],
 
         preprocessors: {

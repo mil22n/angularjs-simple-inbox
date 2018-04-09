@@ -5,16 +5,15 @@ body {
   color: $fontColor;
 }
 
-header {
-  padding-top: 30px;
-  padding-bottom: 15px;
-
-  h3 {
-    font-weight: bolder;
-  }
-}
-
 app {
+  header {
+    padding-top: 30px;
+    padding-bottom: 15px;
+
+    h3 {
+      font-weight: bolder;
+    }
+  }
   .content-box {
     background-color: $itemBackground;
     -webkit-box-shadow: 0px 2px 5px 0px $shadowColor;

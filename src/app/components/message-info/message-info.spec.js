@@ -13,7 +13,6 @@ describe('MessegeInfo', () => {
     }));
 
     describe('Controller', () => {
-        // controller specs
         let controller;
         beforeEach(() => {
             controller = $componentController('messageInfo', {
@@ -27,28 +26,5 @@ describe('MessegeInfo', () => {
             expect(controller.message).toBeDefined();
             expect(controller.message).toEqual(message);
         });
-    });
-
-    describe('View', () => {
-        // view layer specs.
-        let scope, template;
-
-        beforeEach(() => {
-            scope = $rootScope.$new();
-            template = $compile('<message-info></message-info>')(scope);
-            scope.$apply();
-        });
-
-        it('has name in template', () => {
-            // expect(template.find('h1').html()).to.eq('Found in home.html');
-
-        });
-
-        it('has the correct div structure', () => {
-            expect(template.find('div').length).toEqual(1);
-
-            // console.log(JSON.stringify(template.find('div')));
-        });
-
     });
 });
