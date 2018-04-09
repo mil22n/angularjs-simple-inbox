@@ -1,6 +1,6 @@
 class MessageController {
     constructor(MessageService, $stateParams) {
-        this.message = MessageService.getMessage($stateParams.id);
+        MessageService.getMessage($stateParams.id).then((message) => this.message = message);
     }
 }
 

@@ -1,6 +1,6 @@
 class InboxController {
     constructor(InboxService) {
-        this.messages = InboxService.getMessages();
+        InboxService.getMessages().then((messages) => this.messages = messages);
     }
 }
 

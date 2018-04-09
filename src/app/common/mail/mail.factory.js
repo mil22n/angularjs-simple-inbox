@@ -6,10 +6,12 @@ const mailFactory = angular.module('mail', [])
     function () {
         return {
             get: (id) => {
-                if(id) {
-                    return messages.filter( message => parseInt(message.id) === parseInt(id));
-                }
-                return messages;
+                return new Promise((resolve, reject) => {
+                    if(id) {
+                        resolve(messages.filter( message => parseInt(message.id) === parseInt(id)));
+                    }
+                    return resolve(messages);
+                });
             }
         }
     }]);

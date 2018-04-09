@@ -1,7 +1,7 @@
 import template from './message-info.html';
 import './message-info.scss';
 
-class MessageHeaderController {
+class MessageInfoController {
     constructor() {
         this.dateFormat = 'M/d/yyyy, h:mm a';
     }
@@ -9,7 +9,7 @@ class MessageHeaderController {
 
 export default {
     template,
-    controller: MessageHeaderController,
+    controller: MessageInfoController,
     bindings: {
         message: '<'
     }

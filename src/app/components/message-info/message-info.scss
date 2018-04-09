@@ -1,7 +1,7 @@
 @import '../../common/common';
 
 .message-info {
-  padding: 15px;
+  padding: 20px;
 
   div {
     display: flex;
@@ -9,19 +9,19 @@
   }
 
   .column {
-    min-width: 0;
+    min-width: 55px;
 
-    .initial {
-      background-color: $initialBackground;
-      border-radius: 300px;
-      color: white;
+    .avatar {
+      background-color: $avatarBackground;
+      border-radius: 600px;
+      color: $avatarFontColor;
       display: inline-block;
       font-family:sans-serif;
       font-size: 30px;
       line-height: 50px;
       text-align:center;
       text-decoration:none;
-      width: 50px;
+      min-width: 50px;
       -webkit-text-size-adjust:none;
     }
 

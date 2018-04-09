@@ -6,12 +6,14 @@ const messageFactory = angular.module('message.services', [  ])
         function (MailService) {
             return {
                 getMessage: (messageId) => {
-                    const message = MailService.get(messageId)[0];
-                    const { id, from, subject, text } = message,
+                    return MailService.get(messageId).then((data) => {
+                        const message = data[0];
+                        const { id, from, subject, text } = message,
                             initial = message.from[0].toUpperCase(),
                             date = new Date(message.date);
 
-                    return { id, initial, from, subject, date, text }
+                        return { id, initial, from, subject, date, text }
+                    });
                 }
             }
         }]);
